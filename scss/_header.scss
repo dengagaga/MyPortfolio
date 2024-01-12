@@ -1,0 +1,100 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 2.6rem 6%;
+    @media(max-width:1000px) {
+        padding: 2rem 3%;
+    }
+}
+.logo {
+    font-size: 2.4rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+    & span {
+        color: var(--main-color);
+    }
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.nav {
+    display: flex;
+    gap: 4em;
+    @media(max-width:1024px) {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid var(--main-color);
+        border-bottom: 3px solid var(--main-color);
+        border-bottom-left-radius:2em ;
+        padding: 3rem 6%;
+        background: var(--second-bg-color);
+        border-top: 0.1rem solid rgba(0,0,0, 0.1);
+        display: none;
+    }
+    &_link {
+        font-size: 1.8rem;
+        color: white;
+        font-weight: 600;
+        transition: 0.3s ease;
+        border-bottom: 3px solid transparent;
+	    transition: .2s;
+        position: relative;
+        @media(max-width:1024px) {
+            font-size: 2rem;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            height: 3px;
+            width: 100%;
+            transform: scale(0, 1);
+            transition: transform 0.4s;
+            background: var(--main-color);
+            transform-origin: right top;
+        }
+        &:hover {
+            color: var(--main-color);
+        }
+
+        &:hover:after {
+            transform: scale(1, 1);
+            transform-origin: left top;
+        }
+        &--active {
+            color: var(--main-color);
+            border-bottom: 3px solid var(--main-color);
+        }
+    }
+}
+.nav.active {
+    display: flex;
+    flex-direction: column;
+}
+#menu-icon {
+    width: 40px;
+    display: none;
+    cursor: pointer;
+    @media(max-width:1024px) {
+        display: block;
+    }
+}
+
+@media(max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+}

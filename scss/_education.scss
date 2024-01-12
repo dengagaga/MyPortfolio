@@ -1,0 +1,96 @@
+.education {
+    padding: 100px 15px;
+    background-color: var(--bg-color);
+    & h2 {
+        margin-bottom: 5rem;
+    }
+    &-items {
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 100%;
+            background-color: var(--main-color);
+            left: calc(50% - 1px);
+            @media(max-width:1024px) {
+               left: 7px;
+            }
+        }
+    }
+    &-item {
+        margin-bottom: 40px;
+        width: 100%;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(odd) {
+            padding-right: calc(50% + 30px);
+            text-align: right;
+            @media(max-width:1024px) {
+                text-align: left;
+                padding: 0;
+                padding-left: 37px;
+             }
+        }
+        &:nth-child(even) {
+            padding-left: calc(50% + 30px);
+            text-align: left;
+            @media(max-width:1024px) {
+                text-align: left;
+                padding: 0;
+                padding-left: 37px;
+             }
+        }
+    }
+    &-dot {
+        height: 21px;
+        width: 21px;
+        background-color: var(--main-color);
+        position: absolute;
+        left: calc(50% - 8px);
+        border-radius: 50%;
+        top: 10px;
+        @media(max-width:1024px) {
+            left: -1px;
+         }
+    }
+    &-date {
+        font-size: 20px;
+        margin: 6px 0 15px;
+        font-weight: 800px;
+    }
+    &-content {
+        background-color: var(--main-color);
+        padding: 30px;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: .3s;
+        @media(max-width:1024px) {
+            padding: 20px;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+        & h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 0 10px;
+            text-transform: capitalize;
+        }
+        & p {
+            font-size: 15px;
+            line-height: 22px;
+            opacity: .8;
+            @media(max-width:1024px) {
+                font-size: 14px;
+
+            }
+        }
+    }
+}

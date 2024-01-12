@@ -1,0 +1,62 @@
+.skills {
+    background-color: var(--second-bg-color);
+    margin: 0 auto;
+}
+.skill-bars {
+    margin-top: 8rem;
+    padding: 25px 30px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+}
+.bar {
+    margin: 20px 0;
+    &:first-child {
+        margin-top: 0;
+    }
+    & .info {
+        margin-bottom: 5px;
+        & span {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 17px;
+        }
+    }
+}
+.progress-line {
+    height: 10px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    & span {
+        position: absolute;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    &.html span {
+        width: 100%;
+        background-color: orangered;
+    }
+    &.css span {
+        width: 95%;
+        background-color: rgb(255, 0, 93);
+    }
+    &.js span {
+        width: 85%;
+        background-color: gold;
+    }
+    &.vue span {
+        width: 60%;
+        background-color: rgb(0, 26, 255);
+    }
+    &.react span {
+        width: 25%;
+        background-color: var(--main-color);
+    }
+}
