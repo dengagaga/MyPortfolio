@@ -7,7 +7,10 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 10rem;
     @media(max-width:1000px) {
-        padding: 10rem 3% 2rem;
+        padding: 10rem 3% 5rem;
+    }
+    @media(max-width:500px) {
+        padding: 10rem 3% 8rem;
     }
 }
 .home {
@@ -28,6 +31,7 @@ section {
         cursor: pointer;
         @media(max-width:1024px) {
             width: 70vw;
+            margin-top: 30px;
         }
         &:hover {
             transform: scale(1.07);
