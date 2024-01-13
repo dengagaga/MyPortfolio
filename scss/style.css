@@ -732,6 +732,9 @@ section {
   text-align: center;
   padding-bottom: 5px;
   color: white;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 .social-footer svg {
   transition: 0.5s;
