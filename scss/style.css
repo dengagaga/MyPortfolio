@@ -245,13 +245,20 @@ section {
   justify-content: center;
   align-items: center;
   gap: 8rem;
+  transform: translateX(-150%);
+  animation: ani 2s forwards;
 }
+
 @media (max-width: 1024px) {
   .home {
     flex-direction: column;
     gap: 5rem;
   }
 }
+@keyframes ani {
+    0% {transform: translateX(-150%);}
+    100% {transform: translateY(0);}
+  }
 .home_img img {
   position: relative;
   width: 28vw;
